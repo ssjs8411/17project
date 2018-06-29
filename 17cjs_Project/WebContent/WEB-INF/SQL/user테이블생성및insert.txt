@@ -1,0 +1,23 @@
+CREATE TABLE `user` (
+	`user_id` VARCHAR(10) NOT NULL,
+	`user_pw` VARCHAR(10) NOT NULL,
+	`user_level` VARCHAR(10) NOT NULL,
+	`user_name` VARCHAR(20) NOT NULL,
+	`user_gender` VARCHAR(80) NULL DEFAULT NULL,
+	`user_email` VARCHAR(80) NULL DEFAULT NULL,
+	`user_home` VARCHAR(80) NULL DEFAULT NULL,
+	`user_phone` VARCHAR(80) NULL DEFAULT NULL,
+	`user_addr` VARCHAR(80) NULL DEFAULT NULL,
+	PRIMARY KEY (`user_id`)
+)
+COLLATE='euckr_korean_ci'
+ENGINE=InnoDB;
+
+
+
+INSERT INTO `user` (`user_id`, `user_pw`, `user_level`, `user_name`, `user_gender`, `user_email`, `user_home`, `user_phone`, `user_addr`) VALUES
+	('id001', 'pw001', '관리자', '최지수', '여', 'email01', '주소01', '폰01', '전북'),
+	('id002', 'pw002', '입양자', '김이번', '남', 'email02', '주소02', '폰02', '서울'),
+	('id003', 'pw003', '입양자', '김삼번', '여', 'email03', '주소03', '폰03', '제주'),
+	('id004', 'pw004', '업체직원', '김사번', '여', 'email04', '주소04', '폰04', '경남'),
+	('id005', 'pw005', '업체직원', '김오번', '여', 'email05', '주소05', '폰05', '전남');
